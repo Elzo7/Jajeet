@@ -1,17 +1,11 @@
-//
-//  MemoryGameApp.swift
-//  MemoryGame
-//
-//  Created by user249544 on 11/12/23.
-//
-
 import SwiftUI
 
 @main
 struct MemoryGameApp: App {
+    @StateObject var game = MemoGameViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: game)
         }
     }
 }
