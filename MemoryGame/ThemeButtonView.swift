@@ -3,30 +3,28 @@ import SwiftUI
 struct ThemeButtonView: View {
     let theme: Theme
     @Binding var selectedTheme: Theme
-    let action: () -> Void
+    var onTap: () -> Void
     
     var body: some View {
         Button(action: {
-            action()
+            onTap()
         }) {
             VStack {
                 Image(systemName: theme.icon)
-                    .font(.title)
-                Text(theme.name)
-                    .font(.caption)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 40, height: 40)
+                Text(theme.title)
+                    .font(.footnote)
             }
-            .onTapGesture {
-                selectedTheme = theme
-            }
-            .padding()
-            .foregroundColor(theme.cardColor)
+            .foregroundColor(theme.color)
+            .padding(8)
         }
-        
     }
 }
 
 struct ThemeButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeButtonView(theme: Theme(name: "Animals", icon: "ant", cardColor: .green, emojis: [""]), selectedTheme: .constant(Theme(name: "Animals", icon: "ant", cardColor: .green, emojis: [""])), action: {})
+        ThemeButtonView(theme: .emojis, selectedTheme: .constant(.emojis), onTap: {})
     }
 }

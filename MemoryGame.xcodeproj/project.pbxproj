@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95431122B014C6C00C1518D /* ThemeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95431112B014C6C00C1518D /* ThemeButtonView.swift */; };
 		B96CF4ED2B0103A30043FAB9 /* MemoryGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CF4EC2B0103A30043FAB9 /* MemoryGameApp.swift */; };
 		B96CF4EF2B0103A30043FAB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96CF4EE2B0103A30043FAB9 /* ContentView.swift */; };
 		B96CF4F12B0103A40043FAB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96CF4F02B0103A40043FAB9 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B95431112B014C6C00C1518D /* ThemeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButtonView.swift; sourceTree = "<group>"; };
 		B96CF4E92B0103A30043FAB9 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96CF4EC2B0103A30043FAB9 /* MemoryGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameApp.swift; sourceTree = "<group>"; };
 		B96CF4EE2B0103A30043FAB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				B9C319DE2B011B8900F0B461 /* MemoGameModel.swift */,
 				B9C319E02B011C1700F0B461 /* MemoGameViewModel.swift */,
 				B96CF4FA2B0104280043FAB9 /* CardView.swift */,
+				B95431112B014C6C00C1518D /* ThemeButtonView.swift */,
 				B96CF4F02B0103A40043FAB9 /* Assets.xcassets */,
 				B96CF4F22B0103A40043FAB9 /* Preview Content */,
 			);
@@ -148,6 +151,7 @@
 			files = (
 				B96CF4EF2B0103A30043FAB9 /* ContentView.swift in Sources */,
 				B96CF4FB2B0104280043FAB9 /* CardView.swift in Sources */,
+				B95431122B014C6C00C1518D /* ThemeButtonView.swift in Sources */,
 				B96CF4ED2B0103A30043FAB9 /* MemoryGameApp.swift in Sources */,
 				B9C319E12B011C1700F0B461 /* MemoGameViewModel.swift in Sources */,
 				B9C319DF2B011B8900F0B461 /* MemoGameModel.swift in Sources */,
