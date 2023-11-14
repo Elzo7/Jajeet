@@ -1,30 +1,30 @@
 import SwiftUI
 
 struct ThemeButtonView: View {
-    let theme: Theme
-    @Binding var selectedTheme: Theme
-    var onTap: () -> Void
-    
+    let themeName: String
+    let themeImage: String
+    @ObservedObject var viewModel: MemoGameViewModel
     var body: some View {
         Button(action: {
-            onTap()
+            viewModel.selectedTheme = themeName
+            viewModel.changeTheme()
+            //viewModel.shuffle()
         }) {
             VStack {
-                Image(systemName: theme.icon)
+                Image(systemName: themeImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 40, height: 40)
-                Text(theme.title)
+                Text(themeName)
                     .font(.footnote)
             }
-            .foregroundColor(theme.color)
-            .padding(8)
         }
+        .foregroundColor(viewModel.themeColor)
+        .padding(8)
     }
+    
 }
 
-struct ThemeButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemeButtonView(theme: .emojis, selectedTheme: .constant(.emojis), onTap: {})
-    }
+#Preview {
+    ThemeButtonView(themeName: "Emojis", themeImage: "face.smiling", viewModel: MemoGameViewModel())
 }

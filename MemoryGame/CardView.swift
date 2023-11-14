@@ -3,14 +3,14 @@ import SwiftUI
 struct CardView: View {
     var card: MemoGameModel<String>.Card
     
-    init(_ card: MemoGameModel<String>.Card) {
+    init(_ card: MemoGameModel<String>.Card){
         self.card = card
     }
     
     var body: some View {
-        ZStack {
+        ZStack{
             let base = RoundedRectangle(cornerRadius: 12)
-            Group {
+            Group{
                 base.fill(.white)
                 base.strokeBorder(lineWidth: 2)
                 Text(card.content)
@@ -26,6 +26,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(MemoGameViewModel().cards[0])
+        CardView(MemoGameModel<String>.Card(id: "1", isFaceUp: true, isMatched: false, content: "😇"))
     }
 }
