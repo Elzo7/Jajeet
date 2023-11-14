@@ -16,6 +16,7 @@ struct ContentView: View {
             Button("SHUFFLE"){
                 viewModel.shuffle()
             }
+            .foregroundColor(viewModel.themeColor)
             
             themeButtons
         }
@@ -39,9 +40,13 @@ struct ContentView: View {
     var themeButtons: some View {
         HStack {
             ThemeButtonView(themeName: "Emojis", themeImage: "face.smiling", viewModel: viewModel)
+            
             Spacer()
+            
             ThemeButtonView(themeName: "Food", themeImage: "applelogo", viewModel: viewModel)
+            
             Spacer()
+            
             ThemeButtonView(themeName: "Animals", themeImage: "ant", viewModel: viewModel)
         }
     }

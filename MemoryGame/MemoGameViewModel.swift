@@ -7,14 +7,13 @@ class MemoGameViewModel: ObservableObject{
 
     
     private static func createMemoGameModel() -> MemoGameModel<String>{
-        return MemoGameModel<String>(
-            numberOfPairsOfCards: 10) {index in
-                if emojis.indices.contains(index){
-                    return emojis[index]
-                } else{
-                    return "❓❓"
-                }
+        return MemoGameModel<String>(numberOfPairsOfCards: 7) { index in
+            if emojis.indices.contains(index) {
+                return emojis[index]
+            } else {
+                return "❓❓"
             }
+        }
     }
     
     var cards: Array<MemoGameModel<String>.Card>{

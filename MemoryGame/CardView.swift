@@ -26,6 +26,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(MemoGameModel<String>.Card(id: "1", isFaceUp: true, isMatched: false, content: "😇"))
+        CardView(MemoGameModel<String>.Card(id: "1a", isFaceUp: true, isMatched: false, content: "😇"))
     }
 }
